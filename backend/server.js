@@ -10,7 +10,7 @@ const app = express();
 const server = http.createServer(app);
 const io =  socketIO(server, {
   cors: {
-    origin: 'http://localhost:5173', 
+    origin: '*', 
     methods: ['GET', 'POST'],
     allowedHeaders: ['my-custom-header'],
     credentials: true,
@@ -41,7 +41,7 @@ io.on('connection', (socket) => {
     io.emit('lightStateChange', lightsState);
   });
 
-  // Handle disconnection
+ 
   socket.on('disconnect', () => {
     console.log('A user disconnected');
   });

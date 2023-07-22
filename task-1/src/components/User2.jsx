@@ -43,9 +43,9 @@ const User2 = () => {
     <>
      
         <div className="card main-card my-2 p-2">
-          <div className="row">
+          <div className="row gy-2">
             <h2 className="text-center">User 2</h2>
-            <div className="col-6 ">
+            <div className="col-md-6 col-12">
               <div className="card">
               <Bedroom
                 lightsState={lightsState.bedroom}
@@ -54,7 +54,7 @@ const User2 = () => {
               />
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-md-6 col-12">
               <div className="card">
               <Kitchen
                 lightsState={lightsState.kitchen}
